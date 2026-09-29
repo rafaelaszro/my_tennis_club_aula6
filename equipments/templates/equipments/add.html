@@ -1,0 +1,37 @@
+{% extends "master.html" %}
+
+{% block title %}
+- New equipment
+{% endblock %}
+
+{% block content %}
+
+<div class="card mt-2">
+    <div class="card-header">
+        New equipment
+    </div>
+
+    <div class="card-body">
+        <form action="addrecord/" method="post">
+            {% csrf_token %}
+
+            <label for="name" class="form-label">Name:</label>
+            <input id="name" class="form-control" type="text" name="name" required>
+            <br>
+
+            <label for="register_number" class="form-label">Register Number:</label>
+            <input id="register_number" class="form-control" type="number" name="register_number" required>
+            <br>
+
+            <label for="register_date" class="form-label">Register Date:</label>
+            <input id="register_date" class="form-control" type="date" name="register_date" required>
+            <br>
+
+            <input class="btn btn-primary" type="submit" value="Submit">
+        </form>
+
+        <p class="mt-3"><a href="/equipments/">Voltar</a></p>
+    </div>
+</div>
+
+{% endblock %}

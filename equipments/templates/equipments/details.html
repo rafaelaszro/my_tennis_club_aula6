@@ -1,0 +1,22 @@
+{% extends "master.html" %}
+
+{% block title %}
+- Details of {{ myequipment.name }}
+{% endblock %}
+
+{% block content %}
+
+<div class="card mt-2">
+    <div class="card-header">
+        Details about {{ myequipment.name }}
+    </div>
+
+    <div class="card-body">
+        <h1>{{ myequipment.name }}</h1>
+        <p>Register number: {{ myequipment.register_number }}</p>
+        <p>Register date: {{ myequipment.register_date }}</p>
+        <p><a href="/equipments/">Voltar</a></p>
+    </div>
+</div>
+
+{% endblock %}

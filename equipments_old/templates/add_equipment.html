@@ -1,0 +1,37 @@
+{% extends "master.html" %}
+
+{% block title %}
+ - Novo equipamento
+ {% endblock title %}
+
+{% block content %}
+
+<div class="card mt-2">
+    <div class="card-header">
+        Novo equipamento
+    </div>
+
+    <div class="card-body">
+        
+        <form action="addrecord/" method="post">
+            {% csrf_token %}
+
+            Name:<br>
+            <input type="text" name="name">
+            <br><br>
+            Register Number:<br>
+            <input type="number" name="register_number">
+            <br><br>
+            Register Date:<br>
+            <input type="date" name="register_date">
+            <br><br>
+            <input type="submit" value="Submit">
+        </form>
+
+        <p><a href="/equipments/">Voltar</a></p>
+
+    </div>
+
+</div>
+
+{% endblock %}
